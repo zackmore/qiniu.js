@@ -2104,7 +2104,7 @@
    }
 
    var _configData = {
-     uploadUrl: '//up.qiniu.com',
+     uploadUrl: '//up.qbox.me',
      rsUrl: '//rs.qbox.me',
      rsfUrl: '//rsf.qbox.me'
    };
