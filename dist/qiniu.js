@@ -1640,7 +1640,7 @@
            var putToken = _this.config.putToken;
 
            // upload API
-           var uploadUrl = 'http://' + globalConfig.uploadUrl;
+           var uploadUrl = globalConfig.uploadUrl;
 
            // isIE
            var isIE = window.ActiveXObject ? true : false;
@@ -1702,7 +1702,7 @@
            options.blockSize = options.blockSize || file.MB.form(5);
 
            // upload API
-           var uploadUrl = 'http://' + globalConfig.uploadUrl + '/mkblk/' + options.blockSize;
+           var uploadUrl = globalConfig.uploadUrl + '/mkblk/' + options.blockSize;
 
            // ctx
            var blockCtxes = [];
@@ -1791,7 +1791,7 @@
            if (_this3.config.url) {
              url = utils.format('%s/%s?e=3600&token=%s', _this3.url(), key, getToken);
            } else {
-             url = utils.format('http://%s.qiniudn.com/%s?e=3600&token=%s', _this3.name, key, getToken);
+             url = utils.format('//%s.qiniudn.com/%s?e=3600&token=%s', _this3.name, key, getToken);
            }
 
            ajax.get(url, function (err, body) {
@@ -2104,9 +2104,9 @@
    }
 
    var _configData = {
-     uploadUrl: 'up.qiniu.com',
-     rsUrl: 'rs.qbox.me',
-     rsfUrl: 'rsf.qbox.me'
+     uploadUrl: '//up.qiniu.com',
+     rsUrl: '//rs.qbox.me',
+     rsfUrl: '//rsf.qbox.me'
    };
 
    var Asset = _Asset(_configData);
